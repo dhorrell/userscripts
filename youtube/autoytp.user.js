@@ -12,7 +12,7 @@
 (function() {
     'use strict';
     setInterval(function() {
-        const consentBtn = document.querySelector("[aria-label=\"I understand and wish to proceed\"]");
+        const consentBtn = document.getElementsByClassName("interstitialViewModelButtonContainer")[0].children[0].children[0];
         if(consentBtn == null) return;
         consentBtn.click();
         consentBtn.remove();

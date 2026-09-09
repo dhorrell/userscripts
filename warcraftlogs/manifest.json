@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "content_scripts": [{
+        "exclude_globs": [],
+        "include_globs": ["*"],
+        "js": ["wlsf.user.js"],
+        "matches": ["https://www.warcraftlogs.com/*"],
+        "run_at": "document_end"
+    }],
+    "converted_from_user_script": true,
+    "description": "Hide elements and sticky footer Warcraftlogs",
+    "name": "WarcraftLogs Hider",
+    "version": "3"
+}

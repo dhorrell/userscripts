@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "content_scripts": [{
+        "exclude_globs": [],
+        "include_globs": ["*"],
+        "js": ["autoytp.user.js"],
+        "matches": ["https://consent.youtube.com/*", "https://www.youtube.com/*"],
+        "run_at": "document_end"
+    }],
+    "converted_from_user_script": true,
+    "description": "Youtube auto accept mature content",
+    "name": "Youtube Auto Player",
+    "version": "3"
+}
