@@ -12,9 +12,18 @@
 (function() {
     'use strict';
     setInterval(function() {
-        const consentBtn = document.getElementsByClassName("interstitialViewModelButtonContainer")[0].children[0].children[0];
-        if(consentBtn == null) return;
-        consentBtn.click();
-        consentBtn.remove();
+        const ele = document.getElementsByClassName("interstitialViewModelButtonContainer");
+        if (ele.length == 0) {
+            clearInterval();
+            return;
+        }
+        const btn = ele[0].children[0].children[0];
+        if (btn == null) {
+            clearInterval();
+            return;
+        }
+        btn.click();
+        btn.remove();
+        clearInterval();
     }, 10)();
 })();
